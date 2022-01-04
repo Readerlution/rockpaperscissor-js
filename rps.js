@@ -69,4 +69,7 @@ function play(playerOne, playerTwo) {
     return result;
 }
 
-console.log(playRound());
+for (let i = 0; i < 5; i++) {
+    console.log(`Round ${i+1}\n--------`);
+    console.log(playRound());
+}
