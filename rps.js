@@ -38,7 +38,7 @@ function playRound() {
     }
 }
 
-// Capitalize first letter of input string
+// Capitalize first letter of input string and lowercase for remaining
 function capitalizeFirstLetter(string) {
     let first = string.charAt(0).toUpperCase();
     let rest = string.slice(1).toLowerCase();
