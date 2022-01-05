@@ -2,11 +2,8 @@
 
 const rps = ["Rock", "Paper", "Scissor"]; 
 
-// function that returns a random number between 0-2
-function getRandomInt(/*min=0, max=3*/) {
-    // min = Math.ceil(min);
-    // max = Math.floor(max);
-    // return Math.floor(Math.random()*(max - min) + min);
+// function returns a random number between 0-2
+function getRandomInt() {
     return Math.floor(Math.random()*3)
 }
 
@@ -46,7 +43,7 @@ function capitalizeFirstLetter(string) {
 
 function play(playerOne, playerTwo) {    
     if (playerOne === playerTwo) return "You Tie!";
-    // use the first letter of the move in binary format to utilize comparison operator
+    // use the first letter of the move's binary notation to utilize comparison operator
     else {
         playerOne = playerOne.charCodeAt(0);
         playerTwo = playerTwo.charCodeAt(0);
@@ -68,6 +65,8 @@ function play(playerOne, playerTwo) {
 }
 
 for (let i = 0; i < 5; i++) {
-    console.log(`Round ${i+1}\n--------`);
+    console.log('--------')
+    console.log(`Round ${i+1}:`);
     console.log(playRound());
+    console.log('--------')
 }
