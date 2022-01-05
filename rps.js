@@ -17,13 +17,13 @@ function computerPlay() {
 }
 
 function playRound() {
-    let computerSelection = computerPlay(); // variable to hold computer's chosen move
+    let computerSelection = computerPlay(); // variable to hold computer's randomly chosen move
     let playerSelection = prompt("Choose your move!\n1.Rock\n2.Paper\n3.Scissor\n"); // promps user to choose a move
 
     if (isNaN(playerSelection)) {
-        playerSelection = capitalizeFirstLetter(playerSelection); // able ignore casing of input
+        playerSelection = capitalizeFirstLetter(playerSelection); // utilize capitalizeFirstLetter function to ignore casing of input
     } else {
-        playerSelection = rps[parseInt(playerSelection)-1];
+        playerSelection = rps[parseInt(playerSelection)-1]; // if user input is in the form of numbers
     }
 
     if (!rps.includes(playerSelection)) throw "Not a valid choice!"; // throws error when user doesn't type between 1-3 or rock, paper or scissor.
@@ -60,9 +60,9 @@ function play(playerOne, playerTwo) {
 
     let result = null;
     if (playerOne === 82 || playerOne === 82.5) {
-        result = playerOne < playerTwo; // rock and paper comparison to others are in reverse
+        result = playerOne < playerTwo; // rock and paper comparison to others are in reverse order
     } else {
-        playerOne = 81;                 // set scissor to greater than paper and less than rock which is correct way
+        playerOne = 81;                 // set scissor to greater than paper and less than rock which is in order
         result = playerOne > playerTwo;
     }
     
